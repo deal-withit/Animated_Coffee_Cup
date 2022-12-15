@@ -1,0 +1,121 @@
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+.coffeecup{
+    height: 100vh; 
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;    
+}
+
+.maincuparea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    /* background-image: url("coffeebg1.jpg"); */
+    background-position: center;
+    height: 600px; 
+    width: 900px; 
+    background-size:500px 600px; 
+    background-repeat: no-repeat;
+    background: linear-gradient(to left,#1f364d,#2c4763);
+    
+}
+
+.cuparea{
+    height: 42%;
+    width: 37%; 
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.maincup{
+    height: 95%; 
+    width: 75%; 
+    /* border-left-color: #9D8674;
+    border-right-color: #E7E9EA;
+    border-bottom-color: #D1D2D4; */
+    border-image: linear-gradient(to right #9D8674, #E7E9EA, #D1D2D4);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 35%;
+    border-bottom-right-radius: 35%; 
+    border-top: 0px;
+    background-image: linear-gradient(to right, #9D8674, #D1D2D4, #E7E9EA);
+    display:flex; 
+    justify-content: center;
+    /* border: 1px solid red;  */
+}
+
+.cuptop{
+    width: 85%; 
+    height: 20%; 
+    border-radius: 50%;
+    margin-top: 10px;
+    background: linear-gradient( #c57e65,#e28462); 
+}
+
+.handle{
+    position:absolute; 
+    height: 200px;
+    width: 140px;
+    border: 15px solid #E7E9EA;
+    border-radius: 50%;
+    border-left: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    transform: rotate(35deg);
+    margin-left: 200px;
+}
+.vapour { 
+    position: relative;
+    display: flex;
+    z-index: 1;
+    padding: 0 20px;
+    margin-top: 50px;
+    height: 10px; 
+  }
+  
+  .vapour span {
+    position: relative;
+    bottom: 50px;
+    display: block;
+    margin: 0 2px 50px;
+    min-width: 8px;
+    height: 120px;
+    background: #fff;
+    border-radius: 50%;
+    animation: vopour-animation 5s linear infinite;
+    opacity: 0;
+    filter: blur(8px);
+    animation-delay: calc(var(--i) * -0.5s);
+  }
+  
+  @keyframes vopour-animation {
+    0% {
+      transform: translateY(0) scaleX(1);
+      opacity: 0;
+    }
+    
+    15% {
+      opacity: 1;  
+    }
+    
+    50% {
+      transform: translateY(-150px) scaleX(5);   
+    }
+    
+    95% {
+      opacity: 0;
+    }
+    
+    100% { 
+      transform: translateY(-300px) scaleX(10);
+    }
+  }
